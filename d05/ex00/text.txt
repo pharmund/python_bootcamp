@@ -1,0 +1,6 @@
+python3 -m venv venv
+source venv/bin/activate
+pip install uwsgi
+pip freeze > requirements.txt
+
+uwsgi --http :8888 --wsgi-file credentials.py
